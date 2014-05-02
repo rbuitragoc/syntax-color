@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://craig.is/making/rainbows -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Code Syntax Highlighting</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/syntaxhighlighter/jquery.syntaxhighlighter.min.js"></script>
+    <script type="text/javascript" src="lib/prettify/prettify.min.js" ></script>
+    <script type="text/javascript" src="init_shl.js" > </script>
+    <link type="text/css" rel="stylesheet" media="screen" href="styles.css">
+</head>
+<body>
+    <div class="borderless-code">
+        <pre class="code language-html">
+            &lt;div&gt;Why isn't the javascript tag being shown &lt;strong&gt;below?&lt;/strong&gt;&lt;/div&gt;
+
+            &lt;script type="javascript"&gt;var aha = "Something beautiful in between.";&lt;/script&gt;
+        </pre>
+    </div>
+    <h2>Following is a demo of a dynamically set piece of text</h2>
+    <div class="borderless-code" id="codehere">
+
+    </div>
+    <script type="text/javascript">
+        var rawContent = '&lt;script type="javascript"&gt;var aha = "Something also beautiful in between.";&lt;/script&gt;';
+        $("#codehere").html('<pre class="code language-html">' + rawContent + '</pre>');
+        $.SyntaxHighlighter.init(SHL_PARAMS);
+    </script>
+</body>
+</html>
